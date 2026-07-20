@@ -1,6 +1,6 @@
 void main() {
   // Data mahasiswa
-  int uts = 75;
+  int uts = 59;
   int uas = 80;
   double kehadiran = 85.0;
 
@@ -13,10 +13,7 @@ void main() {
   bool syaratNilaiMinimal = (uts >= 60) && (uas >= 60);
 
   // Menggabungkan semua syarat
-  bool lulus =
-      syaratRataRata &&
-      syaratKehadiran &&
-      syaratNilaiMinimal;
+  bool lulus = syaratRataRata && syaratKehadiran && syaratNilaiMinimal;
 
   // Menampilkan hasil
   print("=== HASIL PENILAIAN MAHASISWA ===");
