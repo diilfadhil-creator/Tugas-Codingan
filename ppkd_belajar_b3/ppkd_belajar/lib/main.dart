@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_belajar/day_5/layouting.dart';
 import 'package:ppkd_belajar/day_5/scaffold.dart';
 import 'package:ppkd_belajar/day_5/styling.dart';
+import 'package:ppkd_belajar/tugas_1/tugas1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       home:
-          const StylingDay5(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
+          const Tugas1(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
     );
   }
 }
