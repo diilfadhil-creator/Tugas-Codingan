@@ -19,9 +19,9 @@ class StylingDay5 extends StatelessWidget {
         //mainAxisSize: MainAxisSize.max,
         spacing: 15,
         children: [
-          Text("Hello batch 7", style: TextStyle(fontSize: 30)),
-          Text("Hello batch 7", style: TextStyle(fontSize: 30)),
-          Text("Hello batch 7", style: TextStyle(fontSize: 30)),
+          Text("Hello batch 7", style: TextStyle(fontSize: 25)),
+          Text("Hello batch 7", style: TextStyle(fontSize: 25)),
+          Text("Hello batch 7", style: TextStyle(fontSize: 25)),
           Row(children: [Icon(Icons.star), Text(("Hello batch 7"))]),
         ],
       ),
