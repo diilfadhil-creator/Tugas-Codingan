@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:ppkd_belajar/day_5/layouting.dart';
 import 'package:ppkd_belajar/day_5/scaffold.dart';
 import 'package:ppkd_belajar/day_5/styling.dart';
+import 'package:ppkd_belajar/day_6/center.dart';
+import 'package:ppkd_belajar/day_6/container.dart';
+import 'package:ppkd_belajar/day_6/expanded.dart';
+import 'package:ppkd_belajar/day_6/image.dart';
+import 'package:ppkd_belajar/day_6/layouting.dart';
+import 'package:ppkd_belajar/day_6/layouting.dart';
+import 'package:ppkd_belajar/day_7/tugas2.dart';
 import 'package:ppkd_belajar/tugas_1/tugas1.dart';
 
 void main() {
@@ -35,7 +42,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       home:
-          const Tugas1(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
+          const Tugas2Day7(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
     );
   }
 }
