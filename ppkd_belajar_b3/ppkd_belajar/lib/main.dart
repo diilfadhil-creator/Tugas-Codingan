@@ -11,6 +11,7 @@ import 'package:ppkd_belajar/day_6/layouting.dart';
 import 'package:ppkd_belajar/day_7/tugas2.dart';
 import 'package:ppkd_belajar/day_8/stack.dart';
 import 'package:ppkd_belajar/day_8/tugas3.dart';
+import 'package:ppkd_belajar/day_8/tugas4.dart';
 import 'package:ppkd_belajar/tugas_1/tugas1.dart';
 
 void main() {
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       home:
-          const Tugas3(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
+          const Tugas4(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
     );
   }
 }
