@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ppkd_belajar/day_10/showimages.dart';
+import 'package:ppkd_belajar/day_10/stf.dart';
 import 'package:ppkd_belajar/day_5/layouting.dart';
 import 'package:ppkd_belajar/day_5/scaffold.dart';
 import 'package:ppkd_belajar/day_5/styling.dart';
@@ -12,6 +14,8 @@ import 'package:ppkd_belajar/day_7/tugas2.dart';
 import 'package:ppkd_belajar/day_8/stack.dart';
 import 'package:ppkd_belajar/day_8/tugas3.dart';
 import 'package:ppkd_belajar/day_8/tugas4.dart';
+import 'package:ppkd_belajar/day_9/day9.dart';
+import 'package:ppkd_belajar/day_9/tugas9.dart';
 import 'package:ppkd_belajar/tugas_1/tugas1.dart';
 
 void main() {
@@ -45,7 +49,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       home:
-          const Tugas4(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
+          const Tugas9(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
     );
   }
 }
