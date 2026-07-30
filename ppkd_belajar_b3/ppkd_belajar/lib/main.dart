@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_belajar/day_10/showimages.dart';
 import 'package:ppkd_belajar/day_10/stf.dart';
+import 'package:ppkd_belajar/day_11/home.dart';
+import 'package:ppkd_belajar/day_11/routing.dart';
+import 'package:ppkd_belajar/day_11/tugas11.dart';
 import 'package:ppkd_belajar/day_5/layouting.dart';
 import 'package:ppkd_belajar/day_5/scaffold.dart';
 import 'package:ppkd_belajar/day_5/styling.dart';
@@ -48,8 +51,14 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
+      //push name
+      initialRoute: '/',
+      routes: {
+        // '/': (context) => RoutingDay11(),
+        // '/home': (context) => Homeday11(),
+      },
       home:
-          const Tugas9(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
+          const Tugas11(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
     );
   }
 }
