@@ -11,37 +11,37 @@ class Level3List extends StatelessWidget {
     ),
     BukuMajalah(
       nama: 'Filosofi Teras',
-      gambarImg: 'assets/images/kangkung.jpg',
+      gambarImg: 'assets/images/filosofi.jpg',
       deskripsi: 'Kangkung renyah bebas pestisida, cocok untuk tumisan.',
     ),
     BukuMajalah(
       nama: 'Bumi Manusia',
-      gambarImg: 'assets/images/wortel.webp',
+      gambarImg: 'assets/images/bumi.jpg',
       deskripsi: 'Wortel manis tinggi Vitamin A, baik untuk kesehatan mata.',
     ),
     BukuMajalah(
       nama: 'Atomic Habbits',
-      gambarImg: 'assets/images/brokoli.jpg',
+      gambarImg: 'assets/images/atomic.jpg',
       deskripsi: 'Superfood kaya serat dan antioksidan untuk stamina tubuh.',
     ),
     BukuMajalah(
       nama: 'Sapiens',
-      gambarImg: 'assets/images/kol.jpg',
+      gambarImg: 'assets/images/sapiens.jpg',
       deskripsi: 'Pilihan pas untuk campuran sup padat gizi.',
     ),
     BukuMajalah(
       nama: 'Laut Bercerita',
-      gambarImg: 'assets/images/kubis.jpg',
+      gambarImg: 'assets/images/laut.jpg',
       deskripsi: 'Kubis segar renyah, tahan lama disimpan di kulkas.',
     ),
     BukuMajalah(
       nama: '1984',
-      gambarImg: 'assets/images/sawi_hijau.webp',
+      gambarImg: 'assets/images/1984.jpg',
       deskripsi: 'Sayuran populer untuk pelengkap mie dan mie goreng.',
     ),
     BukuMajalah(
       nama: 'Cantik Itu Luka',
-      gambarImg: 'assets/images/sawi.jpg',
+      gambarImg: 'assets/images/cinta.jpg',
       deskripsi:
           'Tekstur lembut dan kaya air, pas untuk masakan kimchi atau kuah.',
     ),
@@ -52,7 +52,7 @@ class Level3List extends StatelessWidget {
     ),
     BukuMajalah(
       nama: 'National Graphic',
-      gambarImg: 'assets/images/tomat.jpg',
+      gambarImg: 'assets/images/tempo.webp',
       deskripsi: 'Tomat matang pohon, kaya akan likopen dan Vitamin C.',
     ),
     BukuMajalah(
