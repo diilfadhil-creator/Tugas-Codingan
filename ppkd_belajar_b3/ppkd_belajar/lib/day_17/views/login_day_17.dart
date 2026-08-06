@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:ppkd_belajar/day_11/extension/navigator.dart';
+import 'package:ppkd_belajar/day_13/bottomnav.dart';
 import 'package:ppkd_belajar/day_13/drawer.dart';
+import 'package:ppkd_belajar/day_17/service/prefrence_handler.dart';
 
-class Tugas11 extends StatelessWidget {
-  const Tugas11({super.key});
+// Halaman Login Day 17 (StatefulWidget untuk mengelola controller input teks dan interaksi user).
+class LoginDay17 extends StatefulWidget {
+  const LoginDay17({super.key});
+
+  @override
+  State<LoginDay17> createState() => _LoginDay17State();
+}
+
+class _LoginDay17State extends State<LoginDay17> {
+  // Controller untuk membaca dan mengontrol isi field input email.
+  final TextEditingController emailC = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    // Warna latar belakang utama (Dark Blue)
+    // Warna latar belakang utama (Dark Blue) & warna tombol sosial media.
     const primaryBgColor = Color(0xFF00224D);
     const socialBtnColor = Color(0xFF0A2E5C);
 
@@ -22,7 +34,7 @@ class Tugas11 extends StatelessWidget {
             size: 20,
           ),
           onPressed: () {
-            // Aksi tombol kembali
+            // Aksi tombol kembali (jika diperlukan)
           },
         ),
         title: const Text(
@@ -43,7 +55,7 @@ class Tugas11 extends StatelessWidget {
             children: [
               const SizedBox(height: 20),
 
-              // Judul & Sub-judul
+              // Judul & Sub-judul halaman login
               const Text(
                 'Hello Welcome Back',
                 textAlign: TextAlign.center,
@@ -68,18 +80,16 @@ class Tugas11 extends StatelessWidget {
 
               // Input Email
               TextField(
+                controller: emailC,
                 style: const TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(
-                    Icons.email_outlined,
-                    color: Colors.white70,
-                  ),
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.email_outlined, color: Colors.white70),
                   hintText: 'Email',
-                  hintStyle: const TextStyle(color: Colors.white54),
-                  enabledBorder: const UnderlineInputBorder(
+                  hintStyle: TextStyle(color: Colors.white54),
+                  enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white24),
                   ),
-                  focusedBorder: const UnderlineInputBorder(
+                  focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
                 ),
@@ -91,17 +101,14 @@ class Tugas11 extends StatelessWidget {
               TextField(
                 obscureText: true,
                 style: const TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(
-                    Icons.lock_outline,
-                    color: Colors.white70,
-                  ),
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.lock_outline, color: Colors.white70),
                   hintText: 'Password',
-                  hintStyle: const TextStyle(color: Colors.white54),
-                  enabledBorder: const UnderlineInputBorder(
+                  hintStyle: TextStyle(color: Colors.white54),
+                  enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white24),
                   ),
-                  focusedBorder: const UnderlineInputBorder(
+                  focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
                 ),
@@ -115,10 +122,11 @@ class Tugas11 extends StatelessWidget {
                 height: 52,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DrawerDay13()),
-                    );
+                    // 1. Menyimpan status login menjadi true di SharedPreferences lokal storage.
+                    PreferenceHandler.setLogin(true);
+
+                    // 2. Berpindah halaman ke BottomNavDay13 menggunakan extension navigator (context.push).
+                    context.push(const BottomnavDay13());
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
@@ -137,7 +145,7 @@ class Tugas11 extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // Divider "or"
+              // Pembatas / Divider "Or"
               Row(
                 children: const [
                   Expanded(child: Divider(color: Colors.white24, thickness: 1)),
@@ -154,12 +162,15 @@ class Tugas11 extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // Tombol Facebook
+              // Tombol Login via Facebook
               SizedBox(
                 width: double.infinity,
                 height: 52,
                 child: ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Navigasi alternatif ke halaman DrawerDay13
+                    context.push(const DrawerDay13());
+                  },
                   icon: Image.asset('assets/images/Fb.png', cacheHeight: 30),
                   label: const Text(
                     'Facebook',
@@ -180,7 +191,7 @@ class Tugas11 extends StatelessWidget {
 
               const SizedBox(height: 16),
 
-              // Tombol Gmail
+              // Tombol Login via Gmail
               SizedBox(
                 width: double.infinity,
                 height: 52,
@@ -219,7 +230,7 @@ class Tugas11 extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigasi ke Halaman Sign In
+                      // Aksi navigasi ke halaman Sign In jika ada
                     },
                     child: const Text(
                       'Sign In',

@@ -4,7 +4,11 @@ import 'package:ppkd_belajar/Day_14/drawer_menu/kategoriproduk.dart';
 import 'package:ppkd_belajar/Day_14/drawer_menu/syaratketentuan.dart';
 import 'package:ppkd_belajar/Day_14/drawer_menu/tampilan.dart';
 import 'package:ppkd_belajar/Day_14/drawer_menu/tanggal.dart';
+import 'package:ppkd_belajar/Day_15/list.dart';
+import 'package:ppkd_belajar/Day_15/list_of_map.dart';
+import 'package:ppkd_belajar/Day_15/model/list_model.dart';
 import 'package:ppkd_belajar/day_11/extension/navigator.dart';
+import 'package:ppkd_belajar/day_16/text_form_field.dart';
 
 class ReferensTugas7NihDul extends StatefulWidget {
   const ReferensTugas7NihDul({super.key});
@@ -28,6 +32,10 @@ class _ReferensTugas7NihDulState extends State<ReferensTugas7NihDul> {
     Kategoriproduk(),
     Tanggal(),
     Aturpengingat(),
+    ListDay15(),
+    ListOfMapDay15(),
+    // ListOfModel(),
+    TextFormFieldDay16(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -70,6 +78,26 @@ class _ReferensTugas7NihDulState extends State<ReferensTugas7NihDul> {
               icon: Icons.notification_add,
               title: "Atur Peringatan",
               index: 4,
+            ),
+            listtilebuatdrawer(
+              icon: Icons.desktop_windows,
+              title: "List",
+              index: 5,
+            ),
+            listtilebuatdrawer(
+              icon: Icons.desktop_windows,
+              title: "List Buah",
+              index: 6,
+            ),
+            listtilebuatdrawer(
+              icon: Icons.desktop_windows,
+              title: "List Buah (Model)",
+              index: 7,
+            ),
+            listtilebuatdrawer(
+              icon: Icons.desktop_windows,
+              title: "Text Form Field",
+              index: 8,
             ),
           ],
         ),

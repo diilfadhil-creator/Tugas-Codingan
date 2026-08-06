@@ -12,6 +12,9 @@ import 'package:ppkd_belajar/day_11/tugas11.dart';
 import 'package:ppkd_belajar/day_13/bottomnav.dart';
 import 'package:ppkd_belajar/day_13/drawer.dart';
 import 'package:ppkd_belajar/day_13/input_widget/checkbox.dart';
+import 'package:ppkd_belajar/day_17/service/prefrence_handler.dart';
+import 'package:ppkd_belajar/day_17/views/login_day_17.dart';
+import 'package:ppkd_belajar/day_17/views/splash_screen.dart';
 import 'package:ppkd_belajar/day_5/layouting.dart';
 import 'package:ppkd_belajar/day_5/scaffold.dart';
 import 'package:ppkd_belajar/day_5/styling.dart';
@@ -31,7 +34,9 @@ import 'package:ppkd_belajar/tugas_1/tugas1.dart';
 import 'package:ppkd_belajar/tugas_10/register_page.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await initializeDateFormatting('id_ID', null);
+  await PreferenceHandler.init();
   runApp(const MyApp());
 }
 
@@ -63,13 +68,13 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       //push name
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (context) => ButtomNavDay13(),
-      //   '/home': (context) => Homeday11(),
-      // },
-      home:
-          RegisterPage(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SplashScreenDay17(),
+        // '/home': (context) => Homeday11(),
+      },
+      // home:
+      //     RegisterPage(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
     );
   }
 }
