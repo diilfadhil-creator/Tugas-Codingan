@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:ppkd_belajar/Day_14/tugas7saya.dart';
+import 'package:ppkd_belajar/Day_15/menu_navbar/navbar.dart';
+import 'package:ppkd_belajar/Day_15/tugas9.dart';
+import 'package:ppkd_belajar/apk_baziz/login.dart';
 import 'package:ppkd_belajar/day_10/showimages.dart';
 import 'package:ppkd_belajar/day_10/stf.dart';
 import 'package:ppkd_belajar/day_11/home.dart';
 import 'package:ppkd_belajar/day_11/routing.dart';
 import 'package:ppkd_belajar/day_11/tugas11.dart';
+import 'package:ppkd_belajar/day_13/bottomnav.dart';
+import 'package:ppkd_belajar/day_13/drawer.dart';
+import 'package:ppkd_belajar/day_13/input_widget/checkbox.dart';
 import 'package:ppkd_belajar/day_5/layouting.dart';
 import 'package:ppkd_belajar/day_5/scaffold.dart';
 import 'package:ppkd_belajar/day_5/styling.dart';
@@ -20,8 +28,10 @@ import 'package:ppkd_belajar/day_8/tugas4.dart';
 import 'package:ppkd_belajar/day_9/day9.dart';
 import 'package:ppkd_belajar/day_9/tugas9.dart';
 import 'package:ppkd_belajar/tugas_1/tugas1.dart';
+import 'package:ppkd_belajar/tugas_10/register_page.dart';
 
-void main() {
+void main() async {
+  await initializeDateFormatting('id_ID', null);
   runApp(const MyApp());
 }
 
@@ -32,6 +42,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -52,13 +63,13 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       //push name
-      initialRoute: '/',
-      routes: {
-        // '/': (context) => RoutingDay11(),
-        // '/home': (context) => Homeday11(),
-      },
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) => ButtomNavDay13(),
+      //   '/home': (context) => Homeday11(),
+      // },
       home:
-          const Tugas11(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
+          RegisterPage(), // TODO: Complete implementationDay5// TODO: Complete implementation// TODO: Complete implementationldDay5(),
     );
   }
 }

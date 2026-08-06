@@ -113,7 +113,7 @@ class _RegisterPageState extends State<RegisterPage> {
         ),
         centerTitle: true,
       ),
-
+      //text
       body: Padding(
         padding: const EdgeInsets.all(20),
 

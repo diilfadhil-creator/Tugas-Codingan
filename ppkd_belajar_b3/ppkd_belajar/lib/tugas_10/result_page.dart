@@ -17,7 +17,7 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Hasil Pendaftaran")),
-
+      //text
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
