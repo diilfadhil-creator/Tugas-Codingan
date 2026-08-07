@@ -24,7 +24,7 @@ class _SplashScreenDay17State extends State<SplashScreenDay17> {
   // Fungsi untuk menangani alur perpindahan halaman dari splash screen.
   void goToLogin() async {
     // Memberikan penundaan (delay) selama 3 detik untuk menampilkan animasi splash screen.
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 2));
 
     // Mengecek status login pengguna dari SharedPreferences melalui PreferenceHandler.
     if (PreferenceHandler.isLogin == true) {
@@ -40,7 +40,7 @@ class _SplashScreenDay17State extends State<SplashScreenDay17> {
   Widget build(BuildContext context) {
     return Scaffold(
       // Menampilkan animasi Lottie di tengah layar sebagai visual splash screen.
-      body: Center(child: Lottie.asset("assets/animation/error.json")),
+      body: Center(child: Lottie.asset("assets/animation/cat.json")),
     );
   }
 }

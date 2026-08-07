@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ppkd_belajar/apk_baziz/login.dart';
+import 'package:ppkd_belajar/day_11/extension/navigator.dart';
 import 'package:ppkd_belajar/day_11/tugas11.dart';
+import 'package:ppkd_belajar/day_17/service/prefrence_handler.dart';
+import 'package:ppkd_belajar/day_17/views/login_day_17.dart';
 import 'package:ppkd_belajar/day_9/day9.dart';
 import 'package:ppkd_belajar/day_9/tugas9.dart';
 
@@ -19,7 +22,12 @@ class _BottomnavDay13State extends State<BottomnavDay13> {
     setState(() {});
   }
 
-  final List<Widget> _widgetOptions = [Login(), Tugas11(), Tugas9()];
+  final List<Widget> _widgetOptions = [
+    Login(),
+    Tugas11(),
+    Tugas9(),
+    LogoutScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,15 +37,46 @@ class _BottomnavDay13State extends State<BottomnavDay13> {
         },
         currentIndex: _selectedBottom,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-          BottomNavigationBarItem(icon: Icon(Icons.school), label: "school"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(Icons.home, color: Colors.black),
+            label: "home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school, color: Colors.black),
+            label: "school",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business, color: Colors.black),
             label: "business",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.logout, color: Colors.black),
+            label: 'Log Out',
           ),
         ],
       ),
       body: _widgetOptions.elementAt(_selectedBottom),
+    );
+  }
+}
+
+class LogoutScreen extends StatelessWidget {
+  const LogoutScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        // 1. Menghapus session status login di SharedPreferences lokal.
+        PreferenceHandler.logOut();
+
+        // 2. Mengarahkan pengguna kembali ke halaman LoginDay17 serta menghapus seluruh tumpukan navigasi sebelumnya (pushAndRemoveAll).
+        context.pushAndRemoveAll(const LoginDay17());
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Anda Telah loguot')));
+      },
+      child: const Center(child: Icon(Icons.logout, size: 48)),
     );
   }
 }

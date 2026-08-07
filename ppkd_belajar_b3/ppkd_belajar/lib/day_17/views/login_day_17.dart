@@ -163,33 +163,6 @@ class _LoginDay17State extends State<LoginDay17> {
               const SizedBox(height: 30),
 
               // Tombol Login via Facebook
-              SizedBox(
-                width: double.infinity,
-                height: 52,
-                child: ElevatedButton.icon(
-                  onPressed: () {
-                    // Navigasi alternatif ke halaman DrawerDay13
-                    context.push(const DrawerDay13());
-                  },
-                  icon: Image.asset('assets/images/Fb.png', cacheHeight: 30),
-                  label: const Text(
-                    'Facebook',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: socialBtnColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    elevation: 0,
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 16),
 
               // Tombol Login via Gmail
               SizedBox(
